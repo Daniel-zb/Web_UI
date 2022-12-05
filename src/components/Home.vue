@@ -92,7 +92,7 @@ export default {
     },
     // 跳转至设备概况页面
     transToEquipOverview() {
-      this.transToCertainPage("equipinfo");
+      this.transToCertainPage("equipoverview");
     },
     // 跳转至部件详情页面
     transToPartDetail() {
