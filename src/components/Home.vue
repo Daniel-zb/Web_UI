@@ -92,51 +92,53 @@ export default {
     },
     // 跳转至设备概况页面
     transToEquipOverview() {
-      this.transToCertainPage("equipoverview");
+      this.$router.push("/equipoverview");
     },
     // 跳转至部件详情页面
     transToPartDetail() {
-      this.transToCertainPage("partdetail");
+      this.$router.push("/partdetail");
     },
     // 跳转至参数设置页面
     transToParamSet() {
-      this.transToCertainPage("paramset");
+      this.$router.push("/paramset");
     },
     // 跳转至数据管理页面
     transToDataManage() {
-      this.transToCertainPage("datamanage");
+      this.$router.push("/datamanage");
     },
     // 跳转至使用说明页面
     transToInstruct() {
-      this.transToCertainPage("instruct");
+      this.$router.push("/instruct");
     },
-    // 跳转至支承端轴承页面（二级导航）
+    // 跳转至支持端轴承页面（二级导航）
     transToSupportingBearing() {
+      this.$router.push("/supportingbearing");
       console.log("aaa");
-      this.transToCertainPage("supportingbearing");
     },
     // 跳转至丝杆页面（二级导航）
     transToScrew() {
-      this.transToCertainPage("screw");
+      this.$router.push("/screw");
     },
     // 跳转至电机页面（二级导航）
     transToMotor() {
-      this.transToCertainPage("motor");
+      this.$router.push("/motor");
     },
     // 跳转至螺母座页面（二级导航）
     transToNut() {
-      this.transToCertainPage("nut");
+      this.$router.push("/nut");
     },
     // 跳转至固定端轴承页面（二级导航）
     transToFixedBearing() {
-      this.transToCertainPage("fixedbearing");
+      this.$router.push("/fixedbearing");
     },
-    // 跳转至某一页面的方法，先要判断当前是否已经处于目标页面
+
+    /*
+    // 跳转至某一页面的方法，先要判断当前是否已经处于目标页面，一旦修复路由配置文件里的bug则不再需要该方法了
     transToCertainPage(keyword) {
       if (!this.$route.path.includes(keyword)) {
         this.$router.push(keyword);
       }
-    },
+    },*/
   },
 };
 </script>

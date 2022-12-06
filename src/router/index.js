@@ -14,6 +14,12 @@ import FixedBearing from '../pages/FixedBearing/index.vue';
 
 Vue.use(Router);
 
+// 下边这三行代码可以修复“重复点击某路由链接时会报错”的bug
+const originalPush = Router.prototype.push;
+Router.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err);
+};
+
 export default new Router({
   routes: [
     { path: "/", redirect: '/home' },
