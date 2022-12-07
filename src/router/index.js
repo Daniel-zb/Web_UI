@@ -11,7 +11,9 @@ import Screw from '../pages/Screw/index.vue';
 import Motor from '../pages/Motor/index.vue';
 import Nut from '../pages/Nut/index.vue';
 import FixedBearing from '../pages/FixedBearing/index.vue';
-
+import TimeAnalysisDetail from '../pages/TimeAnalysisDetail/index.vue';
+import FreqAnalysisDetail from '../pages/FreqAnalysisDetail/index.vue';
+import TimeFreqAnalysisDetail from '../pages/TimeFreqAnalysisDetail/index.vue';
 Vue.use(Router);
 
 // 下边这三行代码可以修复“重复点击某路由链接时会报错”的bug
@@ -33,11 +35,18 @@ export default new Router({
         { path: '/paramset', component: ParamSet },
         { path: '/datamanage', component: DataManage },
         { path: '/instruct', component: Instruct },
-        { path: '/supportingbearing', component: SupportingBearing },
+        {
+          path: '/supportingbearing', component: SupportingBearing,
+        },
+
         { path: '/screw', component: Screw },
         { path: '/motor', component: Motor },
         { path: '/nut', component: Nut },
         { path: '/fixedbearing', component: FixedBearing },
+        { path: '/timeanalysisdetail', component: TimeAnalysisDetail },
+        { path: '/freqanalysisdetail', component: FreqAnalysisDetail },
+        { path: '/timefreqanalysisdetail', component: TimeFreqAnalysisDetail },
+
       ]
     },
   ]

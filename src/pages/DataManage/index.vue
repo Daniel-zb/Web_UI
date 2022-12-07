@@ -1,5 +1,5 @@
 <template>
-  <div>数据管理页面</div>
+  <div>本页是数据管理页面</div>
 </template>
 
 <script>

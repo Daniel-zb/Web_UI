@@ -26,12 +26,14 @@ export default {
   },
   props: ["comName", "comId"],
   mounted() {
+    // vue 挂载完毕后显示图表
     this.chartInit();
   },
   methods: {
+    // 此处的chartInit方法仅在演示时使用，数据是随机生成的，后续开发时会使用后端接口传来的数据渲染图表。
     chartInit() {
       let myChart = echarts.init(this.$refs.chart);
-      // 纵坐标的数取值在正负0.2之间,长度为五千
+      // 纵坐标的数取值在正负0.6之间,长度为五千
       let yData = [],
         len = 5000,
         randMin = -0.6,
@@ -46,7 +48,7 @@ export default {
         yAxis: {
           min: randMin - 0.1,
           max: randMax + 0.1,
-          interval: (0.5 * (randMax - randMin)) / 2, // 纵坐标间隔大小
+          interval: (randMax + 0.1) / 2, // 纵坐标间隔大小
         },
         series: [
           {
@@ -60,6 +62,7 @@ export default {
     },
     transToComponentHealth() {
       // 点击“健康状态”按钮时，根据父组件传来的部件id决定往哪个页面跳转。
+      // 可将当前页面生成的时域数据通过vuex传过去，也可通过其他方式。此处不再赘述
       switch (this.comId) {
         case 0:
           this.$router.push("/supportingbearing");
@@ -111,6 +114,6 @@ export default {
   display: inline-block;
   position: absolute;
   top: 40%;
-  right: 300px;
+  left: 1200px;
 }
 </style>

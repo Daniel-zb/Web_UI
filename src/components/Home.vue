@@ -19,8 +19,10 @@
           <!-- 一级菜单的模板区域 -->
           <template slot="title">
             <div @click="transToPartDetail">
-              <i class="el-icon-menu" :style="{ color: fontColor }"></i>
-              <span :style="{ color: fontColor }">部件详情</span>
+              <!-- <i class="el-icon-menu" :style="{ color: fontColor }"></i>
+              <span :style="{ color: fontColor }">部件详情</span> -->
+              <i class="el-icon-menu"></i>
+              <span>部件详情</span>
             </div>
           </template>
           <!-- 这里是二级菜单 -->
@@ -56,7 +58,6 @@
       <!-- 路由占位符 -->
       <router-view></router-view>
     </el-main>
-    <!-- </el-container> -->
   </el-container>
 </template>
 
@@ -67,19 +68,7 @@ export default {
       fontColor: "#fff",
     };
   },
-  watch: {
-    // 监听路由变化，看其中是否包含"partdetail"，如果包含则把其字体和icon颜色变为黄色，否则变为白色
-    $route: {
-      handler() {
-        if (this.$route.path.includes("partdetail")) {
-          this.fontColor = "rgb(255,208,75)";
-        } else {
-          this.fontColor = "#fff";
-        }
-      },
-      immediate: true,
-    },
-  },
+  watch: {},
   created() {
     // 一旦进入界面就应该展示设备信息(默认页面)
     this.showEquipOverview();
@@ -113,7 +102,6 @@ export default {
     // 跳转至支持端轴承页面（二级导航）
     transToSupportingBearing() {
       this.$router.push("/supportingbearing");
-      console.log("aaa");
     },
     // 跳转至丝杆页面（二级导航）
     transToScrew() {
