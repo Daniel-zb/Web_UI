@@ -1,7 +1,6 @@
 <template>
   <!-- 本组件使用的各项数据应由后端数据库传递，目前手动生成的所有数据均只为演示使用 -->
   <div>
-    <!-- <div style="margin: 10px 0 10px 0">{{ partName }}</div> -->
     <el-button type="primary" id="partName" style="font-size: 1em">{{
       partName
     }}</el-button>
