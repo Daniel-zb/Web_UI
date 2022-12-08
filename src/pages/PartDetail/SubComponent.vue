@@ -61,7 +61,7 @@ export default {
       });
     },
     transToComponentHealth() {
-      // 点击“健康状态”按钮时，根据父组件传来的部件id决定往哪个页面跳转。
+      // 点击“健康状态”按钮时，根据父组件传来的部件id-comId决定往哪个页面跳转。
       // 可将当前页面生成的时域数据通过vuex传过去，也可通过其他方式。此处不再赘述
       switch (this.comId) {
         case 0:
