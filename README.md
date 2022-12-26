@@ -1,4 +1,4 @@
-# huawei_ui
+# Web_UI
 
 ## Project setup
 ```
